@@ -64,7 +64,12 @@ def main():
         else:
             result = "유형 2: 협력 중심 학습자"
     elif q1 == "기술 탐구":
-        result = "유형 5: 기술 탐구형 교사"
+        q2 = st.radio("Q2. 기술 도구를 자주 실험해보십니까?", ["네", "아니오"])
+        q3 = st.radio("Q3. 새로운 기술이 교육 환경을 개선할 잠재력이 있다고 믿으십니까?", ["네", "아니오"])
+        if q2 == "네" and q3 == "네":
+            result = "유형 5: 기술 탐구형 교사"
+        else:
+            result = "유형 3: 전문성 강화 탐구자"
 
     # 결과 출력
     if st.button("결과 보기"):
@@ -85,7 +90,7 @@ def main():
         body {
             background-color: black;
             color: white;
-            font-family: "궁서", serif;
+            font-family: 'Gungsuh', serif;
         }
         </style>
         """,
